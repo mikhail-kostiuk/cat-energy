@@ -1,0 +1,6 @@
+mixin svg(name, cls)
+  -
+    const baseClassName = `icon icon-${name}`;
+    const className = !cls ? baseClassName : `${baseClassName} ${cls}`;
+  svg(class=className)
+    use(xlink:href=`img/sprite.svg#${name}`)

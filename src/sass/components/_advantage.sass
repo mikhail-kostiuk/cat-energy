@@ -1,0 +1,51 @@
+.advantage
+  width: 100%
+  position: relative
+  display: flex
+  align-items: center
+  counter-increment: item
+  +rmin($tablet)
+    width: 40%
+    flex-direction: column
+    align-items: flex-start
+    height: 228px
+  +rmin(1100)
+    width: 20%
+
+  &__image
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-shrink: 0
+    width: 60px
+    height: 60px
+    color: white
+    background-color: $green-light
+
+  &__text
+    position: relative
+    z-index: 4
+    margin: 0
+    margin-left: 20px
+    padding: 0
+    font-family: 'Arial'
+    font-size: 14px
+    line-height: 18px
+    color: $grey-dark
+    +rmin($tablet)
+      margin-top: 38px
+      margin-left: 0
+      font-size: 16px
+      line-height: 24px
+
+  &::after
+    display: none
+    +rmin($tablet)
+      content: counter(item)
+      display: block
+      position: absolute
+      z-index: 3
+      right: 0
+      top: -61px
+      font-size: 281px
+      color: $grey-light

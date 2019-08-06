@@ -1,0 +1,47 @@
+.checkbox
+  position: relative
+  z-index: 20
+  display: flex
+  align-items: center
+  &:hover .checkbox__border
+    border: 1px solid $grey-input-hover
+
+  &__border
+    position: absolute
+    top: 0
+    left: 0
+    width: 40px
+    height: 40px
+    border: 1px solid $grey-input-idle
+
+  &__input
+    position: relative
+    z-index: 10
+    width: 40px
+    height: 40px
+    opacity: 0
+    &:checked ~ .checkbox__checkmark
+      display: block
+    &:hover
+      cursor: pointer
+    
+  &__checkmark
+    display: none
+    position: absolute
+    top: 12px
+    left: 10px
+    color: $green-light
+
+  &__label
+    padding-left: 19px
+    font-size: 16px
+    line-height: 18px
+    text-transform: uppercase
+    color: #222222
+    +rmin($tablet)
+      font-size: 20px
+      line-height: 20px
+    &:hover
+      cursor: pointer
+    &:active
+      opacity: 0.3

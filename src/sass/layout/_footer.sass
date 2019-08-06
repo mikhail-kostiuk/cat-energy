@@ -1,0 +1,98 @@
+.footer
+  max-width: 1440px
+  margin: 0 auto
+  background-color: $grey-light
+  &__inner
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-height: 150px
+    +rmin($tablet)
+      flex-direction: row
+    +rmin($desktop)
+    & > *
+      min-height: 65px
+      border-bottom: 1px solid #d9d9d9
+      +rmin($tablet)
+        border-bottom: none
+      &:last-child
+        border-bottom: none
+
+  &__logo-textual
+    display: flex
+    justify-content: space-around
+    align-items: center
+    & img
+      display: block
+      width: 128px
+      height: 24px
+
+  &__socials-wrapper
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+  &__socials
+    display: flex
+    align-items: center
+
+  &__social
+    margin-left: 29px
+    &:first-child
+      margin-left: 0
+    & .icon-vk
+      width: 22px
+      height: 12px
+      +rmin($tablet)
+        width: 30px
+        height: 16px
+    & .icon-insta
+      width: 16px
+      height: 16px
+      +rmin($tablet)
+        width: 23px
+        height: 23px
+    & .icon-fb
+      width: 10px
+      height: 19px
+      +rmin($tablet)
+        width: 14px
+        height: 28px
+
+  &__social-link
+    display: flex
+    justify-content: space-around
+    align-items: center
+    text-decoration: none
+    color: #666666
+    &:hover
+      color: $green-light
+    &:active
+      color: $green-light
+      opacity: 0.3
+
+  &__authorship
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+  &__authorship-link
+    display: flex
+    align-items: center
+    text-decoration: none
+    &:hover .footer__authorship-icon
+      color: $green-light
+    &:active
+      opacity: 0.3
+
+  &__authorship-text
+    font-family: 'Arial'
+    font-size: 16px
+    line-height: 16px
+    color: $grey-dark
+
+  &__authorship-icon
+    width: 27px
+    height: 34px
+    margin-left: 23px
+    color: #666666

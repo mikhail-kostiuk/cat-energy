@@ -1,0 +1,16 @@
+include ../helpers/_mixins
+
+doctype html
+html(lang="en")
+  head
+    block head
+      meta(charset="utf-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+      title Cat Energy
+      link(rel="stylesheet", href="css/app.css")
+      link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:400,500,700&display=swap&subset=cyrillic")
+  body
+    include ../partials/_header
+    block content
+    include ../partials/_footer
+    script(src="js/main.js")

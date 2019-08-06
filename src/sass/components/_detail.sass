@@ -1,0 +1,45 @@
+.detail
+  width: 124px
+  +rmin($tablet)
+    display: flex
+    flex-direction: column
+    width: 162px
+
+  &__value
+    margin: 0
+    display: flex
+    justify-content: space-around
+    align-items: center
+    height: 56px
+    border: 1px solid #cdcdcd
+    border-radius: 3px
+    font-size: 24px
+    line-height: 24px
+    color: $black
+    text-transform: uppercase
+    +rmin($tablet)
+      height: 72px
+      font-size: 30px
+      line-height: 37px
+
+  &__text
+    display: inline-block
+    margin: 0 20px
+    padding: 0 16px
+    font-family: 'Arial'
+    font-size: 12px
+    line-height: 12px
+    text-align: center
+    color: $grey-dark
+    text-transform: lowercase
+    background-color: $grey-light
+    transform: translateY(-8px)
+    +rmin($tablet)
+      margin: 0 auto
+      padding: 0 8px
+      font-size: 14px
+      line-height: 14px
+      background-color: white
+      transform: translateY(-9px)
+    +rmin($desktop)
+      background-color: $grey-light

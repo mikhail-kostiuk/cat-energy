@@ -1,0 +1,61 @@
+.more
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-top: 22px
+  padding-bottom: 24px
+  +rmin($tablet)
+    justify-content: space-between
+    padding: 55px 38px 40px 38px;
+    height: 100%
+    border: 1px solid #e6e6e6
+
+  &__icon
+    display: block
+    margin: 0 auto
+    width: 30px
+    height: 30px
+    opacity: 0.2
+    +rmin($tablet)
+      width: 60px
+      height: 60px
+
+  &__title
+    margin-top: 22px
+    font-size: 16px
+    line-height: 20px
+    text-transform: uppercase
+    text-align: center
+    color: $black
+    +rmin($tablet)
+      margin-top: 32px 
+      font-size: 20px
+      line-height: 20px
+
+  &__text
+    margin-top: 12px
+    font-size: 12px
+    line-height: 16px
+    text-align: center
+    color: $grey-dark
+    +rmin($tablet)
+      margin-top: 30px 
+      font-size: 16px
+      line-height: 20px
+
+  &__button
+    margin-top: 23px
+    padding: 0
+    width: 100%
+    min-height: 40px
+    border: none
+    font-size: 16px
+    line-height: 20px
+    text-transform: uppercase
+    color: $grey-dark
+    background-color: $grey-light
+    &:hover
+      background-color: #ebebeb
+      cursor: pointer
+    &:active
+      color: rgba(0, 0, 0, 0.3)

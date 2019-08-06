@@ -1,0 +1,383 @@
+@import generated/sprite.scss
+@import helpers/_all
+@import base/_all
+@import components/_all
+@import layout/_header
+@import layout/_footer
+
+.container
+  margin: 0 auto
+  padding: 0 20px
+  +rmin($tablet)
+    padding: 0 30px
+  +rmin($desktop)
+    padding: 0
+    max-width: 1220px
+
+.hero
+  margin: 0 auto
+  max-width: 1440px
+  background-color: #65a93c
+  +rmin($tablet)
+    background: none
+  +rmin($desktop)
+    margin-top: -170px
+    padding-top: 170px
+    background-image: url("../img/index-background-desktop.jpg")
+    background-repeat: no-repeat
+    background-position: right top
+
+  &__inner
+    position: relative
+    display: flex
+    flex-direction: column
+    +rmin($tablet)
+      margin: 0
+      padding: 0
+    +rmin($desktop)
+      flex-direction: row
+      margin-top: 60px
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 30px
+    +rmin($tablet)
+      align-items: flex-start
+      width: 420px
+      margin-left: 90px
+      padding-top: 118px
+      padding: 0
+
+  &__title
+    margin: 0
+    padding: 0
+    font-size: 36px
+    line-height: 36px
+    font-weight: normal
+    text-align: center
+    color: white
+    +rmin($tablet)
+      font-size: 60px
+      line-height: 60px
+      text-align: start
+      color: $black
+
+  &__tagline
+    margin: 0
+    margin-top: 20px
+    padding: 0
+    font-size: 14px
+    line-height: 14px
+    text-transform: uppercase
+    color: white
+    +rmin($tablet)
+      margin-top: 60px
+      font-size: 20px
+      line-height: 20px
+      color: $black
+
+  &__button
+    position: relative
+    z-index: 2
+    margin-top: 310px
+    padding: 0
+    min-width: 245px
+    min-height: 52px
+    border: none
+    font-size: 20px
+    line-height: 20px
+    text-transform: uppercase
+    color: white
+    background-color: $green-light
+    +rmin($tablet)
+      margin-top: 54px
+    &:hover
+      background-color: $green-dark
+      cursor: pointer
+    &:active
+      color: rgba(255, 255, 255, 0.3)
+
+
+  &__image
+    margin: 0 auto
+    margin-top: -325px
+    width: 280px
+    +rmin($tablet)
+      position: relative
+      z-index: 1
+      display: flex
+      justify-content: space-around
+      align-items: center
+      margin: 0 auto
+      margin-top: -70px
+      width: 709px
+    +rmin($desktop)
+      width: 552px
+      margin-left: -86px
+    & img
+      width: 100%
+
+.categories
+  padding-top: 90px
+
+  &__inner
+    display: flex
+    flex-direction: column
+    +rmin($desktop)
+      flex-direction: row
+      justify-content: space-between
+
+  & .category
+    margin-top: 30px
+    +rmin($desktop)
+      margin-top: 0
+      margin-left: 
+    &:first-child
+      margin-top: 0
+
+.advantages
+  padding-top: 30px
+  padding-bottom: 42px
+  +rmin($tablet)
+    padding-bottom: 55px
+    border-bottom: 1px solid #d9d9d9
+  +rmin($desktop)
+    border: none
+
+  &__title
+    margin: 0
+    margin-bottom: 30px
+    padding: 0
+    font-size: 36px
+    line-height: 60px
+    font-weight: normal
+    +rmin($tablet)
+      margin-bottom: 0
+      font-size: 60px
+      line-height: 60px
+
+  & .advantage
+    margin-top: 20px
+    +rmin($tablet)
+      margin-top: 80px
+
+  & .advantage:nth-child(2n)
+    margin-right: 0
+
+  &__list
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    margin: 0
+    padding: 0
+    counter-reset: item
+    +rmin(1100)
+      justify-content: space-between
+
+.examples
+  padding-top: 30px
+  background-color: $grey-light
+  +rmin($tablet)
+    padding-top: 40px
+    background-color: white
+
+  &__title
+    margin: 0
+    padding: 0
+    padding-bottom: 36px
+    font-size: 36px
+    line-height: 36px
+    font-weight: normal
+    color: $black
+    +rmin($tablet)
+      padding-bottom: 56px
+      font-size: 60px
+      line-height: 60px
+  
+  & .example
+    +rmin($desktop)
+      margin-left: -110px
+      margin-right: -110px
+
+.questionnaire
+  &__title
+    margin: 0
+    margin-top: 40px
+    padding: 0
+    font-size: 36px
+    line-height: 60px
+    font-weight: normal
+    color: $black
+    +rmin($tablet)
+      font-size: 60px
+
+  &__text
+    margin: 0
+    margin-top: 28px
+    margin-bottom: 40px
+    padding: 0
+    font-size: 14px
+    line-height: 18px
+    text-transform: uppercase
+    color: $black
+    +rmin($tablet)
+      margin-top: 55px
+      margin-bottom: 70px
+      width: 330px
+      font-size: 20px
+      line-height: 30px
+
+.catalog
+  &__title
+    margin: 0
+    margin-top: 15px
+    font-size: 36px
+    line-height: 60px
+    font-weight: normal
+    color: $black
+    +rmin($tablet)
+      font-size: 60px
+      line-height: 60px
+
+  &__list
+    margin: 0
+    margin-top: 24px
+    padding: 0
+    list-style-type: none
+    +rmin($tablet)
+      display: flex
+      flex-wrap: wrap
+      margin: 0 -30px
+      margin-top: 24px
+
+  &__item
+    border-bottom: 1px solid $grey-light
+    +rmin($tablet)
+      display: flex
+      width: 50%
+      padding: 0 30px
+      margin-top: 140px
+      border: none
+      +rmin(1024)
+        width: percentage(1/3)
+      +rmin($desktop)
+        width: 25%
+    &:first-child
+      border-top: 1px solid $grey-light
+      +rmin($tablet)
+        border: none
+
+.extra-products
+  +rmin($desktop)
+    padding-bottom: 80px
+
+  &__title
+    position: relative
+    margin: 30px -20px 30px -40px
+    padding: 0 20px
+    font-weight: normal
+    color: $black
+    +rmin($tablet)
+      margin: 80px -30px 60px -30px
+      padding: 0 30px
+    +rmin($desktop)
+      margin: 80px -110px 60px -110px
+      padding: 0 110px
+      width: 1440px      
+    &::before
+      content: ""
+      position: absolute
+      height: 3px
+      width: 100%
+      top: 15px
+      left: 0
+      background-color: $green-light
+      +rmin($tablet)
+        top: 22px
+    & span
+      position: relative
+      display: inline-block
+      padding: 0 22px
+      font-size: 24px
+      line-height: 24px
+      background-color: white
+      +rmin($tablet)
+        padding: 0 40px
+        font-size: 36px
+        line-height: 36px
+      +rmin($desktop)
+        margin-left: -40px
+
+  &__content
+    +rmin($desktop)
+      display: flex
+      align-items: stretch
+
+  &__list
+    margin: 0
+    padding: 0
+    list-style-type: none
+    +rmin($desktop)
+      flex-grow: 1
+
+  &__item
+    border-bottom: 1px solid $grey-light
+    +rmin($tablet)
+      padding: 0 37px
+      border-right: 1px solid $grey-light
+      border-left: 1px solid $grey-light
+    +rmin($desktop)
+      padding: 0
+      border-right: none
+      border-left: none
+    &:first-child
+      border-top: 1px solid $grey-light
+
+  &__gift
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 40px
+    margin-bottom: 35px
+    width: 100%
+    height: 290px
+    background-color: #65a93c
+    +rmin($tablet)
+      flex-direction: row
+      justify-content: space-between
+      padding: 0 100px
+      height: 200px
+    +rmin($desktop)
+      flex-direction: column
+      justify-content: space-around
+      align-items: center
+      margin: 0
+      margin-left: 80px
+      padding: 0
+      width: 245px
+      height: auto
+
+  &__gift-image
+    margin-top: 65px
+    color: white
+    +rmin($tablet)
+      margin-top: 0
+    +rmin($desktop)
+
+  &__gift-text
+    margin: 0
+    margin-top: 65px
+    width: 170px
+    font-family: 'Arial'
+    font-size: 16px
+    line-height: 20px
+    text-align: center
+    color: white
+    +rmin($tablet)
+      margin-top: 0
+      text-align: start
+    +rmin($desktop)
+      text-align: center
+

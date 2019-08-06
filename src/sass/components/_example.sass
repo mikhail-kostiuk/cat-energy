@@ -1,0 +1,77 @@
+.example
+  +rmin($desktop)
+    display: flex
+    padding: 80px 110px 0 110px
+    width: 1440px
+    background-color: $grey-light
+
+  &__content
+    +rmin($desktop)
+      width: 435px
+  &__text
+    margin: 0
+    padding: 0
+    font-family: 'Arial'
+    font-size: 14px
+    line-height: 18px
+    color: $grey-dark
+    +rmin($tablet)
+      font-size: 16px
+      line-height: 24px
+
+  &__info
+    margin-top: 27px
+    +rmin($tablet)
+      display: flex
+      justify-content: space-between
+      align-items: center
+      margin-top: 56px  
+    +rmin($desktop)
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+
+  &__details
+    display: flex
+    justify-content: space-around
+    +rmin($tablet)
+      justify-content: flex-start
+    & .detail
+      +rmin($tablet)
+        margin-left: 42px
+    & .detail:first-child
+      +rmin($tablet)
+        margin-left: 0
+
+  &__sum
+    margin-top: 13px
+    text-align: center
+    font-size: 14px
+    line-height: 20px
+    text-transform: uppercase
+    +rmin($tablet)
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      margin: 0
+      font-size: 20px
+      line-height: 20px
+    +rmin($desktop)
+      flex-direction: row
+      margin-top: 55px
+
+  &__sum-text
+    
+  &__sum-value
+    +rmin($tablet)
+      margin-top: 10px
+    +rmin($desktop)
+      flex-direction: row
+      margin-top: 0
+      margin-left: 60px
+
+
+  &__slider
+    +rmin($tablet)
+      margin-left: -30px
+      margin-right: -30px

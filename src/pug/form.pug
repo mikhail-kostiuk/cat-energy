@@ -1,0 +1,102 @@
+extends layouts/_base
+
+block content
+  section.questionnaire
+    .container
+      h1.questionnaire__title Подбор программы
+      p.questionnaire__text.
+        Заполните анкету и мы подберем программу питания для вашего кота
+      form.form
+        .form__section
+          .form__column
+            .input
+              label(for="name").input__label Имя*:
+              input(type="text" id="name" name="name").input__input
+            .input
+              label(for="weight").input__label Вес (Кг)*:
+              input(type="number" id="weight" name="weight").input__input
+            .input
+              label(for="age").input__label Возраст (Лет):
+              input(type="number" id="age" name="age").input__input
+          .form__column.form__column--radio
+            .radio
+              input(type="radio" name="program" id="slim" value="slim").radio__input
+              span.radio__checkmark
+              label(for="slim").radio__label Похудение
+            .radio
+              input(type="radio" name="program" id="pro" value="pro").radio__input
+              span.radio__checkmark
+              label(for="pro").radio__label Набор массы
+            .radio
+              input(type="radio" name="program" id="advice" value="advice").radio__input
+              span.radio__checkmark
+              label(for="advice").radio__label Не знаю (Нужен ваш совет)
+        h2.form__title
+         span Контактные данные
+        .form__section
+          .form__column
+            .input
+                label(for="email").input__label E-mail*:
+                input(type="text" id="email" name="email").input__input
+                .input__icon
+                  +svg('email')
+          .form__column.form__column--tel
+            .input
+                label(for="tel").input__label Телефон*:
+                input(type="tel" id="tel" name="tel").input__input
+                .input__icon
+                  +svg('phone')
+        h2.form__title
+         span Комментарий
+        .form__section
+          textarea(name="comments" id="comments" placeholder="Расскажите обо всех повадках кота").form__textarea
+        h2.form__title
+         span Дополнительно
+        .form__section.form__section--extra
+          .checkbox
+            input(type="checkbox", name="extra" id="sweetener" value="sweetener").checkbox__input
+            .checkbox__border
+            .checkbox__checkmark
+              +svg('checkmark')
+            label(for="sweetener").checkbox__label Сахарозаменитель
+          .checkbox
+            input(type="checkbox", name="extra" id="water" value="water").checkbox__input
+            .checkbox__border
+            .checkbox__checkmark
+              +svg('checkmark')
+            label(for="water").checkbox__label Питьевая вода
+          .checkbox
+            input(type="checkbox", name="extra" id="milk" value="milk").checkbox__input
+            .checkbox__border
+            .checkbox__checkmark
+              +svg('checkmark')
+            label(for="milk").checkbox__label Молоко
+          .checkbox
+            input(type="checkbox", name="extra" id="vitamins" value="vitamins").checkbox__input
+            .checkbox__border
+            .checkbox__checkmark
+              +svg('checkmark')
+            label(for="vitamins").checkbox__label Витамины
+        .form__section.form__section--submit
+          .form__column
+            button(type="submit").form__button Отправить заявку
+          .form__column
+            p.form__required * - Обязательные поля
+  section.map
+    .invite.invite--grey
+      h2.invite__text
+        | Приглашаем
+        br
+        | к сотрудничеству
+        br
+        | дилеров!
+      p.invite__address
+        | ул. Большая
+        br
+        | Конюшенная, д. 19/8
+        br
+        | Санкт-Петербург
+    .mapouter
+      .gmap_canvas
+        iframe( width="1440" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B4%D0%BE%D0%BC%2019%2F8&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0") Google Maps Generator by
+          a( href="https://www.embedgooglemap.net") embedgooglemap.net

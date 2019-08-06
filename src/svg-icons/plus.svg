@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 62 62">
+  <title>Asset 1</title>
+  <g id="Layer_2" 
+    data-name="Layer 2">
+    <g id="Layer_1-2" 
+      data-name="Layer 1">
+      <line x1="31" 
+        x2="31" 
+        y2="62" 
+        fill="#fff" 
+        stroke="#000" 
+        stroke-miterlimit="10" 
+        stroke-width="2"/>
+      <line x1="62" 
+        y1="31" 
+        y2="31" 
+        fill="#fff" 
+        stroke="#000" 
+        stroke-miterlimit="10" 
+        stroke-width="2"/>
+    </g>
+  </g>
+</svg>

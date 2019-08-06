@@ -1,0 +1,140 @@
+.form
+  &__title
+    position: relative
+    margin: 30px -20px 30px -40px
+    padding: 0 20px
+    font-weight: normal
+    color: $black
+    +rmin($tablet)
+      margin: 80px -30px 60px -30px
+      padding: 0 30px
+    +rmin($desktop)
+      margin: 80px -110px 60px -110px
+      padding: 0 110px
+      width: 1440px      
+    &::before
+      content: ""
+      position: absolute
+      height: 3px
+      width: 100%
+      top: 15px
+      left: 0
+      background-color: $green-light
+      +rmin($tablet)
+        top: 22px
+    & span
+      position: relative
+      display: inline-block
+      padding: 0 22px
+      font-size: 24px
+      line-height: 24px
+      background-color: white
+      +rmin($tablet)
+        padding: 0 40px
+        font-size: 36px
+        line-height: 36px
+      +rmin($desktop)
+        margin-left: -40px
+      
+  &__section
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    +rmin($tablet)
+      margin: 0 auto
+      width: 630px
+    +rmin($desktop)
+      flex-direction: row
+      width: 1220px
+    &--extra
+      +rmin($tablet)
+        flex-direction: row
+        flex-wrap: wrap
+    &--submit
+      flex-direction: column
+      justify-content: flex-start
+      margin: 30px 0
+      +rmin($tablet)
+        flex-direction: row
+        margin: 0 auto
+        margin-top: 61px
+        margin-bottom: 82px
+      +rmin($desktop)
+        justify-content: space-between
+
+  &__section--extra .checkbox
+    margin-bottom: 32px
+    +rmin($tablet)
+      width: 50%
+    +rmin($desktop)
+      width: 25%
+
+  &__column
+    margin: 0
+    padding: 0
+    +rmin($desktop)
+      width: 570px
+    &--radio
+      margin-top: 72px
+      +rmin($desktop)
+        margin-top: 0
+        padding: 21px 25px
+        border: 1px solid #e6e6e6
+    &--contacts
+      display: flex
+      flex-direction: row
+    &--tel
+      margin-top: 20px
+      +rmin($desktop)
+        margin-top: 0
+
+  & .input
+    margin-top: 20px
+    &:first-child
+      margin-top: 0
+
+  & .radio
+    margin-top: 15px
+    &:first-child
+      margin-top: 0
+
+  &__textarea
+    padding: 10px 20px
+    width: 100%
+    height: 174px
+    border: 1px solid $grey-input-idle
+    font-size: 16px
+    line-height: 18px
+    font-weight: normal
+    color: $grey-dark
+    +rmin($tablet)
+      font-size: 20px
+      line-height: 30px
+
+  &__button
+    padding: 0
+    min-width: 280px
+    min-height: 52px
+    border: none
+    font-size: 20px
+    line-height: 20px
+    text-transform: uppercase
+    color: white
+    background-color: $green-light
+    +rmin($desktop)
+      min-width: 570px
+    &:hover
+      background-color: $green-dark
+      cursor: pointer
+    &:active
+      color: rgba(255, 255, 255, 0.3)
+  
+  &__required
+    margin-left: 0
+    font-family: 'Arial'
+    font-size: 16px
+    line-height: 16px
+    +rmin($tablet)
+      margin-left: 36px
+    +rmin($desktop)
+      margin-left: 0

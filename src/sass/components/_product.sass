@@ -1,0 +1,92 @@
+.product
+  padding-bottom: 24px
+  +rmin($tablet)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 100%
+    padding: 0 38px 40px 38px
+    background-color: $grey-light
+  &:first-child
+
+  &__content
+    display: flex
+    +rmin($tablet)
+      flex-direction: column
+      margin-bottom: 40px
+
+  &__image
+    display: flex
+    justify-content: space-around
+    align-items: center
+    width: 50%
+    height: 144px
+    +rmin($tablet)
+      width: 100%
+      height: 172px
+      margin-top: -46px
+    & img
+      height: 80%
+      +rmin($tablet)
+        height: 100%
+
+  &__info
+    margin-top: 22px
+    width: 50%
+    +rmin($tablet)
+      width: 100%
+
+  &__title
+    margin: 0
+    padding: 0
+    font-size: 16px
+    line-height: 20px
+    font-weight: normal
+    text-transform: uppercase
+    color: $black
+    +rmin($tablet)
+      display: flex
+      flex-direction: column
+      align-items: center
+      font-size: 20px
+
+  &__details
+    margin-top: 17px
+    width: 100%
+    border-spacing: 0
+
+  &__detail
+    display: flex
+    justify-content: space-between
+    margin-top: 2px
+    font-family: 'Arial'
+    font-size: 12px
+    line-height: 16px
+    color: $grey-dark
+    +rmin($tablet)
+      font-size: 16px
+      padding: 10px 0
+      border-bottom: 1px solid #cdcdcd
+
+  &__detail-name
+    padding: 0
+
+  &__detail-value
+    padding: 0
+
+  &__button
+    display: block
+    padding: 0
+    width: 100%
+    min-height: 40px
+    border: none
+    font-size: 16px
+    line-height: 20px
+    text-transform: uppercase
+    color: white
+    background-color: $green-light
+    &:hover
+      background-color: $green-dark
+      cursor: pointer
+    &:active
+      color: rgba(255, 255, 255, 0.3)

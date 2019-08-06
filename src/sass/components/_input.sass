@@ -1,0 +1,32 @@
+.input
+  position: relative
+  display: flex
+  align-items: center
+  font-size: 20px
+  line-height: 20px
+
+  &__label
+    font-size: 16px
+    line-height: 18px
+    text-transform: uppercase
+    white-space: nowrap
+    color: #222222
+    +rmin($tablet)
+      font-size: 20px
+      line-height: 20px
+  
+  &__input
+    padding: 0 15px
+    width: 100%
+    min-height: 52px
+    margin-left: 16px
+    border: 1px solid $grey-input-idle
+    &:hover
+      border: 1px solid $grey-input-hover
+    &:focus
+      outline: none
+      border: 2px solid $grey-input-active
+  
+  &__icon
+    position: absolute
+    right:  20px

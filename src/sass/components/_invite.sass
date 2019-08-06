@@ -1,0 +1,38 @@
+.invite
+  display: flex
+  justify-content: space-around
+  padding: 30px 20px 27px 20px
+  +rmin($tablet)
+    justify-content: space-between
+    padding: 68px 70px 63px 70px
+  +rmin($desktop)
+    position: absolute
+    top: 155px
+    left: 110px
+    z-index: 6
+    width: 570px
+    height: 200px
+    background-color: white
+  &--grey
+    background-color: $grey-light
+
+  &__text
+    margin: 0
+    padding: 0
+    font-size: 16px
+    line-height: 20px
+    font-weight: normal
+    text-transform: uppercase
+    +rmin($tablet)
+      font-size: 20px
+      line-height: 25px
+
+  &__address
+    margin: 0
+    padding: 0
+    font-size: 14px
+    line-height: 20px
+    color: $grey-dark
+    +rmin($tablet)
+      font-size: 16px
+      line-height: 20px

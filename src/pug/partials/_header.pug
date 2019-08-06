@@ -1,0 +1,23 @@
+header.header
+  .container
+    .header__inner
+      .header__bar
+        a(href="#").header__logo-link
+          .header__logo
+            picture
+              source(media="(min-width: 768px)", srcset="img/logo-desktop.svg")
+              img(src="img/logo-mobile.svg", alt="Логотип")
+        .header__logo-textual
+          img(src="img/logo-text.svg", alt="Кэт Энерджи")
+        button.header__button-menu-open.header__button-menu-open--show
+          +svg('menu')
+        button.header__button-menu-close
+          +svg('cross')
+      nav.menu
+        ul.menu__list
+          li.menu__item
+            a(href="index.html").menu__link Главная
+          li.menu__item
+            a(href="catalog.html").menu__link Каталог продукции
+          li.menu__item
+            a(href="form.html").menu__link Подбор программы

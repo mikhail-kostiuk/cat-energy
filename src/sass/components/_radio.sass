@@ -1,0 +1,54 @@
+.radio
+  position: relative
+  display: flex
+  align-items: center
+
+  &__input
+    position: relative
+    z-index: 8
+    margin-right: 19px
+    width: 40px
+    height: 40px
+    opacity: 0
+    &:hover
+      cursor: pointer
+    &:hover ~ .radio__checkmark
+      border: 1px solid $grey-input-hover
+    &:checked ~ .radio__checkmark::after
+      display: block
+    &:active ~ .radio__checkmark
+      opacity: 0.3
+
+  &__checkmark
+    position: absolute
+    z-index: 7
+    top: 0
+    left: 0
+    width: 40px
+    height: 40px
+    border: 1px solid $grey-input-idle
+    border-radius: 50%
+    &::after
+      display: none
+      content: ""
+      position: absolute
+      top: 19px
+      left: 19px
+      height: 18px
+      width: 18px
+      transform: translate(-50%, -50%)
+      background-color: $green-light
+      border-radius: 50%
+
+  &__label
+    font-size: 16px
+    line-height: 18px
+    text-transform: uppercase
+    color: #222222
+    +rmin($tablet)
+      font-size: 20px
+      line-height: 20px
+    &:hover
+      cursor: pointer
+    &:active
+      opacity: 0.3

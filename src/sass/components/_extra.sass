@@ -1,0 +1,86 @@
+.extra
+  padding-top: 14px
+  padding-bottom: 17px
+  +rmin($tablet)
+    padding-top: 27px
+    padding-bottom: 27px
+  +rmin($desktop)
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 15px
+    padding-bottom: 15px
+
+  &__content
+    +rmin($tablet)
+      display: flex
+      justify-content: space-between
+    +rmin($desktop)
+      flex-grow: 1
+
+
+  &__title
+    margin: 0
+    padding: 0
+    font-size: 16px
+    line-height: 16px
+    font-weight: normal
+    text-transform: uppercase
+    color: #222222
+    +rmin($tablet)
+      font-size: 20px
+      line-height: 20px
+  
+  &__details
+    margin-top: 14px
+    width: 100%
+    border-spacing: 0
+    +rmin($tablet)
+      width: auto
+      margin-top: 0
+  
+  &__detail
+    display: flex
+    justify-content: space-between
+    font-family: 'Arial'
+    font-size: 14px
+    line-height: 14px
+    color: $grey-dark
+    +rmin($tablet)
+      justify-content: flex-end
+      font-size: 16px
+      line-height: 20px
+    +rmin($desktop)
+      justify-content: space-between
+      width: 300px
+
+  &__detail-volume
+    padding: 0
+
+  &__detail-price
+    margin-left: 60px
+    padding: 0
+
+  &__button
+    display: block
+    margin-top: 16px
+    padding: 0
+    width: 100%
+    min-height: 40px
+    border: none
+    font-size: 16px
+    line-height: 20px
+    text-transform: uppercase
+    color: white
+    background-color: $green-light
+    +rmin($tablet)
+      margin-top: 27px
+    +rmin($desktop)
+      margin-top: 0
+      margin-left: 50px
+      width: 245px
+    &:hover
+      background-color: $green-dark
+      cursor: pointer
+    &:active
+      color: rgba(255, 255, 255, 0.3)

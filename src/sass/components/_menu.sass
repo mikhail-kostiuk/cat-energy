@@ -1,0 +1,48 @@
+.menu
+  display: none
+  +rmin($tablet)
+    display: block
+  &--show
+    display: block
+
+  &__list
+    display: flex
+    flex-direction: column
+    margin: 0
+    padding: 0
+    list-style-type: none
+    +rmin($tablet)
+      flex-direction: row
+
+  &__item
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin: 0
+    padding: 0
+    border-top: 1px solid #e6e6e6
+    min-height: 65px
+    +rmin($tablet)
+      margin-left: 35px
+      border: none
+    &:hover
+      cursor: pointer
+      color: rgba(0, 0, 0, 0.6)
+      +rmin($desktop)
+    &:active
+      color: rgba(0, 0, 0, 0.3)
+      +rmin($desktop)
+
+  &__link
+    font-size: 20px
+    line-height: 20px
+    font-weight: 500
+    text-transform: uppercase
+    text-decoration: none
+    color: inherit
+    +rmin($tablet)
+      font-size: 18px
+      line-height: 25px
+      font-weight: normal
+    +rmin($desktop)
+      font-size: 20px
